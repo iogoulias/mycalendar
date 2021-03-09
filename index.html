@@ -127,7 +127,7 @@
               if (!when) {
                 when = event.start.date;
               }
-              appendPre(event.summary + ' (' + when + ')')
+              appendPre(event.summary + ' (' + when + ')'+' link: '+event.hangoutLink)
             }
           } else {
             appendPre('No upcoming events found.'); 
