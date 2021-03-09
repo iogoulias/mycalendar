@@ -130,8 +130,15 @@
               appendPre(event.summary + ' (' + when + ')')
             }
           } else {
-            appendPre('No upcoming events found.');
+            appendPre('No upcoming events found.'); 
           }
+        }, function(error) {
+          console.error("Execute error", error);
+          if(error.code == 403)
+          {
+            console.log("No access")
+          }
+
         });
       }
 
